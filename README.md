@@ -42,8 +42,23 @@
          
          for data in data_list:
              video_name = data['title']
-             video_route = data['playUrl']
+             video_route = data['playUrl'] 
              
-             resquests.get()
+             print('loading:', video_name)
+              # indication
+             video_data = resquests.get(video_name,video_route)
+   
     
     # 4、保存数据 -- store在目标文件中
+    
+            with open('video\\' + video_name, 'wb') as f:
+            f.write(video_data)
+            print('loading finished... \n')
+              # \n new line
+            
+            w-write; b-byte; video\\ file name
+            
+            
+            
+      5. download more.
+            after ? will be the parameters
